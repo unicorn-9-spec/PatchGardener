@@ -1,9 +1,9 @@
 {
-  "verified_at": "2026-10-24T17:45:54.068575+00:00",
+  "verified_at": "2026-10-24T17:59:24.128890+00:00",
   "repository": "https://github.com/unicorn-9-spec/PatchGardener",
   "public": true,
   "branch": "main",
-  "observed_branch_head": "ff8c76781bdaf9e96bab5371aa84c0fa939531dd",
+  "observed_branch_head": "af05cf3623803690c39004911acd0ec97d454b5c",
   "screenshot_commit": "ff8c76781bdaf9e96bab5371aa84c0fa939531dd",
   "screenshots": [
     {
@@ -56,5 +56,5 @@
       "sha256": "161079462fe51660101718d43fe7ee224042296ba26de5939b443dd9ee428118"
     }
   ],
-  "youtube": "pending user upload and actual URL"
+  "youtube": "https://youtu.be/cR2HYNkqO_0"
 }

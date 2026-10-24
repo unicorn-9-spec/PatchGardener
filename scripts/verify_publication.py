@@ -39,7 +39,9 @@ def main():
     paths = sorted((ROOT / "demo/assets/screenshots").glob("*.png"))
     with ThreadPoolExecutor(max_workers=4) as pool:
         images = list(pool.map(verify_image, paths))
-    report = {"verified_at": datetime.now(timezone.utc).isoformat(), "repository": url, "public": True, "branch": "main", "observed_branch_head": head, "screenshot_commit": SCREENSHOT_COMMIT, "screenshots": images, "youtube": "pending user upload and actual URL"}
+    youtube_path = ROOT / "docs/youtube-verification.json"
+    youtube = json.loads(youtube_path.read_text(encoding="utf-8"))["user_url"] if youtube_path.exists() else "pending user upload and actual URL"
+    report = {"verified_at": datetime.now(timezone.utc).isoformat(), "repository": url, "public": True, "branch": "main", "observed_branch_head": head, "screenshot_commit": SCREENSHOT_COMMIT, "screenshots": images, "youtube": youtube}
     (ROOT / "docs/publication-results.json").write_text(json.dumps(report, indent=2), encoding="utf-8")
     summary_path = ROOT / "docs/verification-results.json"
     summary = json.loads(summary_path.read_text(encoding="utf-8"))

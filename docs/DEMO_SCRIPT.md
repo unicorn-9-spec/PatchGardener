@@ -1,6 +1,6 @@
 # Actual application demonstration plan
 
-Status: actual recording and Heart narration completed and verified on 24 October 2026. `demo/assets/video/final_demo.mp4` is 118.04 seconds at 1920×1080, with audio, burned captions and a selectable subtitle track. Full decoding passed. Source and seven actual screenshots are published at [unicorn-9-spec/PatchGardener](https://github.com/unicorn-9-spec/PatchGardener). The user's YouTube upload/URL remains pending.
+Status: actual recording and Heart narration completed and verified on 24 October 2026. `demo/assets/video/final_demo.mp4` is 118.04 seconds at 1920×1080, with audio, burned captions and a selectable subtitle track. Full decoding passed. Source and seven actual screenshots are published at [unicorn-9-spec/PatchGardener](https://github.com/unicorn-9-spec/PatchGardener). The user uploaded the narrated video to [YouTube](https://youtu.be/cR2HYNkqO_0); playability, embedding, duration and thumbnail are verified.
 
 ## Reproduce
 
@@ -31,4 +31,4 @@ The script targets 1920×1080 and approximately 110–130 seconds depending on m
 
 The user chose Heart (`af_heart`). `demo/assets/audio/narration_script.md` and `narration_timeline.json` preserve the spoken text and actual scene timing; `kokoro_voiceover.wav`, SRT/ASS captions and `demo/assets/video/final_demo.mp4` are generated. Audio/video duration, word coverage, nonoverlapping subtitle cues, loudness, clipping, full decode and representative captioned frames have been checked. See [voiceover notes](VOICEOVER.md).
 
-The user uploads the verified final video as Public or Unlisted and supplies the actual YouTube URL. Verify its usable ID before embedding it in the article. Do not invent a URL or publish to an automatically chosen account.
+The user supplied https://youtu.be/cR2HYNkqO_0. The usable ID, official embed, playability, rounded 118-second duration and matching thumbnail were verified, and the article contains `{% youtube cR2HYNkqO_0 %}`. DEV publication is a manual user action after article review.

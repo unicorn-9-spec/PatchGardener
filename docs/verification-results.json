@@ -59,8 +59,18 @@
     "captions": 34,
     "report": "../demo/assets/audio/final-verification.json"
   },
-  "youtube": "pending user upload and actual URL",
-  "dev_article": "pending draft only",
+  "youtube": {
+    "status": "verified",
+    "url": "https://youtu.be/cR2HYNkqO_0",
+    "video_id": "cR2HYNkqO_0",
+    "report": "youtube-verification.json"
+  },
+  "dev_article": {
+    "status": "ready_for_user_review",
+    "path": "docs/DEV_SUBMISSION.md",
+    "report": "submission-verification.json",
+    "published_to_dev": false
+  },
   "accessibility": {
     "axe_reports": [
       {

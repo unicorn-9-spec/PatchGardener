@@ -2,10 +2,6 @@ Title: I Built an AI Gardener for the Boring Work Every Open-Source Maintainer A
 
 Tags: devchallenge, hf26challenge, opensource, ai
 
-**Editorial status: PENDING DRAFT, not ready to publish.** The local application, model evaluation, browser verification, seven screenshots, 118.04-second Heart-narrated video and user-approved public GitHub repository are complete. Screenshot URLs below are verified and commit-pinned. The actual YouTube URL and user article review remain pending; no video embed is invented. The final article must be displayed in full for review after the actual URL is supplied.
-
----
-
 *This is a submission for the [Hacktoberfest Open-Source AI Challenge Week 3: Slow and Steady](https://dev.to/challenges/hacktoberfest-week3-2026-10-19)*
 
 ## What I Built
@@ -22,6 +18,8 @@ The scope is narrow. P0 handles unused-import findings, inline relative Markdown
 
 ## Demo
 
+{% youtube cR2HYNkqO_0 %}
+
 The demonstration repository is Meadow Notes, a fictional note-tagging library included as explicitly synthetic test data. It contains real files and deliberately planted problems. The scanners, local inference, patch creation, approval and validation all run against those files.
 
 One measured example starts here:
@@ -37,7 +35,7 @@ The original scan contains five findings. Fixing this one leaves four. That is s
 
 Another planted issue lives under `auth/`. It appears in the queue with its real evidence, but the proposal is withheld. Even a small-looking change in a sensitive area should not quietly pass through the same path as a documentation repair.
 
-The actual narrated demo is 118.04 seconds at 1920×1080, using the user's chosen Heart voice with synchronized captions. It shows fresh local inference, explicit approval, a real separate copy, passing fixture tests and patch export. The complete MP4 decoded successfully. A user-uploaded YouTube URL is still pending; there is no invented embed.
+The narrated walkthrough is 118.04 seconds at 1920×1080, with synchronized captions. It shows fresh local inference, explicit approval, a real separate copy, passing fixture tests and patch export. The complete local MP4 decoded successfully. The linked YouTube upload reports a 118-second duration and allows embedding.
 
 ![Actual repository garden](https://raw.githubusercontent.com/unicorn-9-spec/PatchGardener/ff8c76781bdaf9e96bab5371aa84c0fa939531dd/demo/assets/screenshots/01-garden.png)
 
@@ -49,7 +47,7 @@ The actual narrated demo is 118.04 seconds at 1920×1080, using the user's chose
 
 ## Code
 
-The complete source is public at [unicorn-9-spec/PatchGardener](https://github.com/unicorn-9-spec/PatchGardener), published under the account and visibility explicitly chosen by the user. It includes the runnable application, synthetic fixture and ground truth, real evaluation results, screenshots, recording script and narration workflow. Runtime source snapshots, credentials, model weights and generated audio/video are excluded.
+The complete source is public at [unicorn-9-spec/PatchGardener](https://github.com/unicorn-9-spec/PatchGardener). It includes the runnable application, synthetic fixture and ground truth, real evaluation results, screenshots, recording script and narration workflow. Runtime source snapshots, credentials, model weights and generated audio/video are excluded.
 
 The frontend uses Next.js, React, TypeScript and Tailwind, with a shadcn-style button primitive and semantic review controls. FastAPI and typed Pydantic models implement the local API. SQLite keeps scan records, proposals, approvals, validation outcomes and an audit trail. Ollama serves Qwen3-8B on loopback.
 
@@ -65,7 +63,7 @@ Ruff knows whether an import is unused. A deterministic link checker knows wheth
 
 Qwen is responsible for proposing an edit from that evidence. For a broken guide link, it can choose an appropriate existing destination from the bounded path inventory. For a stale command, it can identify the current example script. It returns structured replacements with a path, exact old substring and replacement text. There are no generated shell commands and no tools delegated to the model.
 
-The default model is Qwen3-8B, using the installed Q4_K_M Ollama artifact. Its Apache-2.0 license was verified from the model publisher. The application records the model digest alongside each accepted proposal and caps its context at 8,192 tokens. It sends the selected file and evidence rather than the entire repository. A missing model or invalid response stops the flow; production has no canned-response fallback.
+The default model is Qwen3-8B, using the installed Q4_K_M Ollama artifact. Its [Apache-2.0 license](https://huggingface.co/Qwen/Qwen3-8B/blob/main/LICENSE) was verified from the model publisher. The application records the model digest alongside each accepted proposal and caps its context at 8,192 tokens. It sends the selected file and evidence rather than the entire repository. A missing model or invalid response stops the flow; production has no canned-response fallback.
 
 Repository contents are treated as untrusted input. Prompt instructions establish that boundary, but the actual protection comes from deterministic gates after inference. An edit must target the selected existing evidence file. Its old text must match exactly once. Hidden, escaping and linked paths are rejected. Protected labels are excluded. A patch is capped at 24 changed lines and 16 KB.
 
@@ -83,9 +81,9 @@ Local evaluation provided a small but inspectable result: five planted in-scope 
 
 The backend has 26 passing tests, including rejection of an encoding-comment injection that AST comparison alone could miss. Python changes must match exact import deletion as well as the AST check. TypeScript checking, the optimized production build, eight live HTTP checks and all three Playwright browser tests passed. Five axe scans across queue, review, result and mobile views reported zero violations. The screenshots and video were visually inspected; these checks are not accessibility certification or a keyboard usability study.
 
-The first unrestricted browser run found something the earlier HTTP smoke test had missed: Next's internal URL used localhost, while the browser opened the loopback IP. The same-origin guard rejected a legitimate scan. Comparing Origin against the validated incoming Host fixed the boundary without accepting external origins. Browser scans also exposed low-contrast labels and a mobile sidebar note that should have been hidden. Those failures led to fixes and regression assertions before recording.
+End-to-end browser testing found something the earlier HTTP smoke test had missed: Next's internal URL used localhost, while the browser opened the loopback IP. The same-origin guard rejected a legitimate scan. Comparing Origin against the validated incoming Host fixed the boundary without accepting external origins. Browser scans also exposed low-contrast labels and a mobile sidebar note that should have been hidden. Those failures led to fixes and regression assertions before recording.
 
-There are other deliberate limits. The inline-link scanner does not crawl external URLs or validate anchors. TypeScript formatting, configuration cleanup and missing-test detection are outside P0. Secret filtering is heuristic, and local snapshots are unencrypted. The diff interface uses accessible HTML rather than Monaco, which was unavailable in the offline dependency cache. Docker support was not claimed because the installed engine was stopped.
+There are other deliberate limits. The inline-link scanner does not crawl external URLs or validate anchors. TypeScript formatting, configuration cleanup and missing-test detection are outside P0. Secret filtering is heuristic, and local snapshots are unencrypted. The diff interface uses accessible HTML; Monaco integration and a verified Docker setup are outside this version.
 
 ## Why Does Open Innovation Matter?
 

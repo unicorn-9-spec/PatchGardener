@@ -1,0 +1,23 @@
+{
+  "path": "docs/DEV_SUBMISSION.md",
+  "word_count": 1818,
+  "headings": [
+    "What I Built",
+    "Demo",
+    "Code",
+    "How I Built It",
+    "Why Does Open Innovation Matter?",
+    "The Lazy Payoff",
+    "Prize Categories"
+  ],
+  "youtube_embed": "{% youtube cR2HYNkqO_0 %}",
+  "verified_screenshot_urls": [
+    "https://raw.githubusercontent.com/unicorn-9-spec/PatchGardener/ff8c76781bdaf9e96bab5371aa84c0fa939531dd/demo/assets/screenshots/01-garden.png",
+    "https://raw.githubusercontent.com/unicorn-9-spec/PatchGardener/ff8c76781bdaf9e96bab5371aa84c0fa939531dd/demo/assets/screenshots/02-evidence-queue.png",
+    "https://raw.githubusercontent.com/unicorn-9-spec/PatchGardener/ff8c76781bdaf9e96bab5371aa84c0fa939531dd/demo/assets/screenshots/04-local-ai-diff.png",
+    "https://raw.githubusercontent.com/unicorn-9-spec/PatchGardener/ff8c76781bdaf9e96bab5371aa84c0fa939531dd/demo/assets/screenshots/06-real-tests.png"
+  ],
+  "sha256": "6bf4dc872528de63607768b6771bd951bd5968295f74618236d4106fb9dc880e",
+  "status": "ready_for_user_review",
+  "published_to_dev": false
+}

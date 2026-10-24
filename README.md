@@ -16,7 +16,7 @@ Public source: [unicorn-9-spec/PatchGardener](https://github.com/unicorn-9-spec/
 - Real Qwen evaluation: 5/5 planted in-scope findings detected, zero false positives; 4/4 eligible proposals validated independently; 1 protected-path issue withheld. Each approved copy passed its three fixture unit tests. These small fixed-fixture results do not estimate performance on unseen repositories.
 - TypeScript check and optimized Next.js build passed. Eight live HTTP checks through the production frontend proxy passed.
 - All 3 Playwright browser tests passed, including the real local AI journey, mobile protected-path layout and API guards. Five axe scans reported zero violations. Desktop/mobile screenshots and representative video frames were visually inspected.
-- Seven actual screenshots and a verified **118.04-second, 1920×1080 narrated demo** were produced. The local file `demo/assets/video/final_demo.mp4` uses the user's chosen Heart voice and 34 synchronized caption cues. Generated media stays local; a public video URL is pending the user's upload.
+- Seven actual screenshots and a verified **118.04-second, 1920×1080 narrated demo** were produced. [Watch the narrated demo on YouTube](https://youtu.be/cR2HYNkqO_0). The local file `demo/assets/video/final_demo.mp4` uses the user's chosen Heart voice and 34 synchronized caption cues.
 
 See [evaluation](docs/EVALUATION.md), [raw model measurements](docs/evaluation-results.json), and [browser results](docs/browser-results.json).
 
@@ -112,4 +112,4 @@ Source snapshots, patches and audit records stay in `data/`, unencrypted at rest
 
 P0 only checks F401/F841, inline relative Markdown links, and `python path.py` example commands. Anchors, external URLs, reference-style links, ESLint, formatting/config cleanup and missing-test detection are outside scope. Python proposals support only single-name top-level F401 import removal; F841 findings may be reported but cannot be patched. Small patches can still be semantically wrong. Review every change.
 
-The user-approved public GitHub repository and screenshot hosting are verified. The remaining checkpoints in [publishing checklist](docs/PUBLISHING_CHECKLIST.md) are the user-provided YouTube URL and article review. The verified narrated video is complete; the DEV article remains a clearly marked pending draft until its actual video URL is supplied.
+The user-approved public GitHub repository, screenshot hosting and user-uploaded YouTube video are verified. The complete article is in [docs/DEV_SUBMISSION.md](docs/DEV_SUBMISSION.md), ready for the user's review before manual DEV publication. The agent does not publish to DEV automatically.

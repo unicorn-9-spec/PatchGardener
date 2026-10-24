@@ -1,4 +1,4 @@
-# Publishing checklist — pending
+# Publishing checklist — user review remaining
 
 Source of approval checkpoints: [BUILD_PROMPT.md](../BUILD_PROMPT.md). No account, organization, voice or remote destination has been selected on the user's behalf.
 
@@ -31,11 +31,11 @@ Source of approval checkpoints: [BUILD_PROMPT.md](../BUILD_PROMPT.md). No accoun
 
 ## YouTube and DEV
 
-- [x] Asked the user to upload the verified final MP4 to their chosen YouTube account as Public or Unlisted and return the actual URL. Awaiting the URL; no automatic upload.
-- [ ] Verify the video ID and embedding; add the genuine `{% youtube ... %}` embed.
-- [ ] Replace the pending article with the final exact-template submission, including real GitHub link and at least four actual hosted screenshots where useful.
-- [ ] Preserve measured claims and limitations; no invented time savings, session embeds, prize integrations or links.
-- [ ] Display the entire final article Markdown in chat for user review.
+- [x] User uploaded the verified final MP4 and supplied https://youtu.be/cR2HYNkqO_0. The agent did not upload it or choose a YouTube account.
+- [x] Verified ID `cR2HYNkqO_0`, official oEmbed, playability OK, embedding permitted, 118-second duration, and thumbnail matching the actual captioned application. Added `{% youtube cR2HYNkqO_0 %}`. See [YouTube verification](youtube-verification.json).
+- [x] Completed the exact-template article with real GitHub link, actual YouTube embed and four verified commit-pinned screenshots.
+- [x] Preserved measured claims and limitations; no invented time savings, session embeds, prize integrations or links.
+- [x] Entire article Markdown supplied in chat for user review.
 - [ ] User reviews the final article. Never automatically publish to DEV.
 
-The current article is explicitly a pending draft. It is not submission-ready. Challenge page verified on 24 October 2026: https://dev.to/challenges/hacktoberfest-week3-2026-10-19. Its required tags are `devchallenge` and `hf26challenge`. The application implements no partner-category integration; do not claim a partner prize category, especially Gemma.
+The complete article is ready for user review and manual submission; it has not been published to DEV. Challenge page verified on 24 October 2026: https://dev.to/challenges/hacktoberfest-week3-2026-10-19. Its required tags are `devchallenge` and `hf26challenge`. The application implements no partner-category integration; no partner prize category is claimed, including Gemma.

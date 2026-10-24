@@ -1,0 +1,19 @@
+{
+  "verified_at": "2026-10-24T17:59:20.063890+00:00",
+  "user_url": "https://youtu.be/cR2HYNkqO_0",
+  "watch_url": "https://www.youtube.com/watch?v=cR2HYNkqO_0",
+  "video_id": "cR2HYNkqO_0",
+  "title": "patch-garner",
+  "author": "Ali Hamza",
+  "channel_id": "UC9Kkap1328krrte1Q3L3jlQ",
+  "length_seconds": 118,
+  "playability_status": "OK",
+  "playable_in_embed": true,
+  "private": false,
+  "oembed_http_status": 200,
+  "watch_http_status": 200,
+  "thumbnail_http_status": 200,
+  "thumbnail_sha256": "b46133ef3cc3e746532100696a1e0f32af77a3fe930ba14b99c699d445ecca0d",
+  "thumbnail_visual_check": "Shows the actual PatchGardener interface and narrated captions",
+  "scope": "Public metadata, embedding and thumbnail verified; not a full streamed playback verification"
+}
