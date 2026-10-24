@@ -1,0 +1,105 @@
+{
+  "voice": "af_heart",
+  "voice_display_name": "Heart",
+  "voice_selected_by": "user",
+  "repo": "hexgrad/Kokoro-82M",
+  "revision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
+  "engine": "kokoro",
+  "engine_version": "0.9.4",
+  "torch": "2.8.0+cpu",
+  "device": "cpu",
+  "threads": 2,
+  "model_sha256": "496dba118d1a58f5f3db2efc88dbdc216e0483fc89fe6e47ee1f2c53f18ad1e4",
+  "voice_sha256": "0ab5709b8ffab19bfd849cd11d98f75b60af7733253ad0d67b12382a102cb4ff",
+  "timeline_sha256": "818d71c650a3591fd72620bb4880d3f61c2943e43e6505de65410e98192ea66a",
+  "video_seconds": 118.04,
+  "assembly_wall_seconds": 53.61,
+  "scenes": [
+    {
+      "id": "burden",
+      "start": 0.8,
+      "end": 9.8,
+      "text": "An unused import. A guide that moved. Small maintenance chores keep pulling a maintainer away from the work they meant to do.",
+      "natural_seconds": 8.075,
+      "tempo_factor": 1.0,
+      "audio_end": 8.875
+    },
+    {
+      "id": "evidence",
+      "start": 11.0,
+      "end": 20.0,
+      "text": "PatchGardener scans this fictional repository with real tools. Each finding comes with a file, a line, and a reproducible diagnosis.",
+      "natural_seconds": 9.45,
+      "tempo_factor": 1.064189,
+      "audio_end": 19.86
+    },
+    {
+      "id": "protected",
+      "start": 21.0,
+      "end": 30.0,
+      "text": "This finding sits under authentication. It stays visible, but an AI proposal is withheld. Sensitive paths remain in human hands.",
+      "natural_seconds": 9.35,
+      "tempo_factor": 1.052928,
+      "audio_end": 29.86
+    },
+    {
+      "id": "selected",
+      "start": 31.0,
+      "end": 39.0,
+      "text": "One unused import. Exact Ruff evidence. A small review unit. The original source is untouched.",
+      "natural_seconds": 7.2,
+      "tempo_factor": 1.0,
+      "audio_end": 38.2
+    },
+    {
+      "id": "proposal",
+      "start": 40.5,
+      "end": 55.5,
+      "text": "Qwen proposes the edit locally. Both versions are visible. The app limits the file, the patch size, and the permitted Python change. Removing an import can still have side effects, so the developer reviews the risk.",
+      "tts_text": "[Qwen](/kw\u02c8\u025bn/) proposes the edit locally. Both versions are visible. The app limits the file, the patch size, and the permitted Python change. Removing an import can still have side effects, so the developer reviews the risk.",
+      "natural_seconds": 14.0,
+      "tempo_factor": 1.0,
+      "audio_end": 54.5
+    },
+    {
+      "id": "approval",
+      "start": 56.0,
+      "end": 67.5,
+      "text": "The button stays disabled until the developer checks the approval box. That authorizes a separate copy. It does not authorize a commit or a push.",
+      "natural_seconds": 9.875,
+      "tempo_factor": 1.0,
+      "audio_end": 65.875
+    },
+    {
+      "id": "verification",
+      "start": 71.0,
+      "end": 86.5,
+      "text": "Now the copied patch earns its result. One issue resolved. Zero new findings. The original stayed unchanged. Existing baseline issues remain visible rather than being hidden behind a green verdict.",
+      "natural_seconds": 13.775,
+      "tempo_factor": 1.0,
+      "audio_end": 84.775
+    },
+    {
+      "id": "tests",
+      "start": 89.0,
+      "end": 98.0,
+      "text": "Expand the actual test output: three fixture tests passed. The exported diff also passed Git's applicability check.",
+      "natural_seconds": 7.85,
+      "tempo_factor": 1.0,
+      "audio_end": 96.85
+    },
+    {
+      "id": "payoff",
+      "start": 99.0,
+      "end": 117.8,
+      "text": "Export a normal patch and inspect the audit trail. Four eligible fixture repairs validated in the measured evaluation, while one protected issue was withheld. Less mechanical tending. More room for the work that matters.",
+      "natural_seconds": 14.525,
+      "tempo_factor": 1.0,
+      "audio_end": 113.525
+    }
+  ],
+  "caption_count": 34,
+  "subtitle_source": "Kokoro model-derived token durations, adjusted for scene pacing",
+  "voice_engine_mentioned_in_narration": false,
+  "final_video_decode_verified": true
+}

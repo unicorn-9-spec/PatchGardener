@@ -1,0 +1,19 @@
+{
+  "voice": "af_heart",
+  "voice_display_name": "Heart",
+  "voice_selected_by": "user",
+  "sample_rate": 24000,
+  "video_duration": 118.04,
+  "source_video": "demo/assets/video/demo_silent.mp4",
+  "scenes": [
+    {"id":"burden","start":0.8,"end":9.8,"text":"An unused import. A guide that moved. Small maintenance chores keep pulling a maintainer away from the work they meant to do."},
+    {"id":"evidence","start":11.0,"end":20.0,"text":"PatchGardener scans this fictional repository with real tools. Each finding comes with a file, a line, and a reproducible diagnosis."},
+    {"id":"protected","start":21.0,"end":30.0,"text":"This finding sits under authentication. It stays visible, but an AI proposal is withheld. Sensitive paths remain in human hands."},
+    {"id":"selected","start":31.0,"end":39.0,"text":"One unused import. Exact Ruff evidence. A small review unit. The original source is untouched."},
+    {"id":"proposal","start":40.5,"end":55.5,"text":"Qwen proposes the edit locally. Both versions are visible. The app limits the file, the patch size, and the permitted Python change. Removing an import can still have side effects, so the developer reviews the risk.","tts_text":"[Qwen](/kwˈɛn/) proposes the edit locally. Both versions are visible. The app limits the file, the patch size, and the permitted Python change. Removing an import can still have side effects, so the developer reviews the risk."},
+    {"id":"approval","start":56.0,"end":67.5,"text":"The button stays disabled until the developer checks the approval box. That authorizes a separate copy. It does not authorize a commit or a push."},
+    {"id":"verification","start":71.0,"end":86.5,"text":"Now the copied patch earns its result. One issue resolved. Zero new findings. The original stayed unchanged. Existing baseline issues remain visible rather than being hidden behind a green verdict."},
+    {"id":"tests","start":89.0,"end":98.0,"text":"Expand the actual test output: three fixture tests passed. The exported diff also passed Git's applicability check."},
+    {"id":"payoff","start":99.0,"end":117.8,"text":"Export a normal patch and inspect the audit trail. Four eligible fixture repairs validated in the measured evaluation, while one protected issue was withheld. Less mechanical tending. More room for the work that matters."}
+  ]
+}

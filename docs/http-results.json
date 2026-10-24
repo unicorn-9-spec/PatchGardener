@@ -1,0 +1,80 @@
+{
+  "synthetic_fixture": true,
+  "checks": [
+    "Production HTML served",
+    "Live local model status through same-origin proxy",
+    "Actual scanners through proxy: five findings",
+    "Real Qwen structured proposal through proxy",
+    "Approval required",
+    "Isolated validation, unchanged original, real fixture tests passed",
+    "Exact downloadable patch",
+    "Cross-origin mutation blocked"
+  ],
+  "model": {
+    "available": true,
+    "model": "qwen3:8b",
+    "digest": "500a1f067a9f782620b40bee6f7b0c89e17ae61f686b92c24933e4ca4b2b8b41",
+    "ollama_version": "0.40.8",
+    "message": "Local model ready"
+  },
+  "inference_ms": 891,
+  "validation": {
+    "id": "ac02833bf01b4b0a83f58d6776f862a8",
+    "proposal_id": "569f728acd0947ab811e93f3ed4f5817",
+    "copy_path": "G:\\Hacktoberfest-2026-Week3\\05-PatchGardener\\data\\runs\\ac02833bf01b4b0a83f58d6776f862a8\\patched",
+    "baseline": [
+      {
+        "name": "Ruff",
+        "status": "failed",
+        "output": "[\n  {\n    \"cell\": null,\n    \"code\": \"F401\",\n    \"end_location\": {\n      \"column\": 15,\n      \"row\": 1\n    },\n    \"filename\": \"G:\\\\Hacktoberfest-2026-Week3\\\\05-PatchGardener\\\\data\\\\runs\\\\ac02833bf01b4b0a83f58d6776f862a8\\\\baseline\\\\auth\\\\session.py\",\n    \"fix\": {\n      \"applicability\": \"safe\",\n      \"edits\": [\n        {\n          \"content\": \"\",\n          \"end_location\": {\n            \"column\": 1,\n            \"row\": 2\n          },\n          \"location\": {\n            \"column\": 1,\n            \"row\": 1\n          }\n        }\n      ],\n      \"message\": \"Remove unused import: `hashlib`\"\n    },\n    \"location\": {\n      \"column\": 8,\n      \"row\": 1\n    },\n    \"message\": \"`hashlib` imported but unused\",\n    \"name\": \"unused-import\",\n    \"noqa_row\": 1,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/unused-import\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"F401\",\n    \"end_location\": {\n      \"column\": 10,\n      \"row\": 1\n    },\n    \"filename\": \"G:\\\\Hacktoberfest-2026-Week3\\\\05-PatchGardener\\\\data\\\\runs\\\\ac02833bf01b4b0a83f58d6776f862a8\\\\baseline\\\\meadow.py\",\n    \"fix\": {\n      \"applicability\": \"safe\",\n      \"edits\": [\n        {\n          \"content\": \"\",\n          \"end_location\": {\n            \"column\": 1,\n            \"row\": 2\n          },\n          \"location\": {\n            \"column\": 1,\n            \"row\": 1\n          }\n        }\n      ],\n      \"message\": \"Remove unused import: `os`\"\n    },\n    \"location\": {\n      \"column\": 8,\n      \"row\": 1\n    },\n    \"message\": \"`os` imported but unused\",\n    \"name\": \"unused-import\",\n    \"noqa_row\": 1,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/unused-import\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"F401\",\n    \"end_location\": {\n      \"column\": 12,\n      \"row\": 2\n    },\n    \"filename\": \"G:\\\\Hacktoberfest-2026-Week3\\\\05-PatchGardener\\\\data\\\\runs\\\\ac02833bf01b4b0a83f58d6776f862a8\\\\baseline\\\\meadow.py\",\n    \"fix\": {\n      \"applicability\": \"safe\",\n      \"edits\": [\n        {\n          \"content\": \"\",\n          \"end_location\": {\n            \"column\": 1,\n            \"row\": 3\n          },\n          \"location\": {\n            \"column\": 1,\n            \"row\": 2\n          }\n        }\n      ],\n      \"message\": \"Remove unused import: `json`\"\n    },\n    \"location\": {\n      \"column\": 8,\n      \"row\": 2\n    },\n    \"message\": \"`json` imported but unused\",\n    \"name\": \"unused-import\",\n    \"noqa_row\": 2,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/unused-import\"\n  }\n]",
+        "duration_ms": 15
+      },
+      {
+        "name": "Markdown & example paths",
+        "status": "failed",
+        "output": "README.md:5 Broken relative link: docs/quickstart.md\nREADME.md:10 Missing Python example: examples/old_demo.py",
+        "duration_ms": 0
+      },
+      {
+        "name": "Fixture unit tests",
+        "status": "passed",
+        "output": "test_blank (test_meadow.MeadowTests.test_blank) ... ok\r\ntest_normalize (test_meadow.MeadowTests.test_normalize) ... ok\r\ntest_unique (test_meadow.MeadowTests.test_unique) ... ok\r\n\r\n----------------------------------------------------------------------\r\nRan 3 tests in 0.000s\r\n\r\nOK\r\n",
+        "duration_ms": 78
+      }
+    ],
+    "checks": [
+      {
+        "name": "Ruff",
+        "status": "failed",
+        "output": "[\n  {\n    \"cell\": null,\n    \"code\": \"F401\",\n    \"end_location\": {\n      \"column\": 15,\n      \"row\": 1\n    },\n    \"filename\": \"G:\\\\Hacktoberfest-2026-Week3\\\\05-PatchGardener\\\\data\\\\runs\\\\ac02833bf01b4b0a83f58d6776f862a8\\\\patched\\\\auth\\\\session.py\",\n    \"fix\": {\n      \"applicability\": \"safe\",\n      \"edits\": [\n        {\n          \"content\": \"\",\n          \"end_location\": {\n            \"column\": 1,\n            \"row\": 2\n          },\n          \"location\": {\n            \"column\": 1,\n            \"row\": 1\n          }\n        }\n      ],\n      \"message\": \"Remove unused import: `hashlib`\"\n    },\n    \"location\": {\n      \"column\": 8,\n      \"row\": 1\n    },\n    \"message\": \"`hashlib` imported but unused\",\n    \"name\": \"unused-import\",\n    \"noqa_row\": 1,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/unused-import\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"F401\",\n    \"end_location\": {\n      \"column\": 12,\n      \"row\": 2\n    },\n    \"filename\": \"G:\\\\Hacktoberfest-2026-Week3\\\\05-PatchGardener\\\\data\\\\runs\\\\ac02833bf01b4b0a83f58d6776f862a8\\\\patched\\\\meadow.py\",\n    \"fix\": {\n      \"applicability\": \"safe\",\n      \"edits\": [\n        {\n          \"content\": \"\",\n          \"end_location\": {\n            \"column\": 1,\n            \"row\": 3\n          },\n          \"location\": {\n            \"column\": 1,\n            \"row\": 2\n          }\n        }\n      ],\n      \"message\": \"Remove unused import: `json`\"\n    },\n    \"location\": {\n      \"column\": 8,\n      \"row\": 2\n    },\n    \"message\": \"`json` imported but unused\",\n    \"name\": \"unused-import\",\n    \"noqa_row\": 2,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/unused-import\"\n  }\n]",
+        "duration_ms": 16
+      },
+      {
+        "name": "Markdown & example paths",
+        "status": "failed",
+        "output": "README.md:5 Broken relative link: docs/quickstart.md\nREADME.md:10 Missing Python example: examples/old_demo.py",
+        "duration_ms": 0
+      },
+      {
+        "name": "Unified diff applicability",
+        "status": "passed",
+        "output": "",
+        "duration_ms": 30
+      },
+      {
+        "name": "Fixture unit tests",
+        "status": "passed",
+        "output": "test_blank (test_meadow.MeadowTests.test_blank) ... ok\r\ntest_normalize (test_meadow.MeadowTests.test_normalize) ... ok\r\ntest_unique (test_meadow.MeadowTests.test_unique) ... ok\r\n\r\n----------------------------------------------------------------------\r\nRan 3 tests in 0.000s\r\n\r\nOK\r\n",
+        "duration_ms": 94
+      }
+    ],
+    "before_issues": 5,
+    "after_issues": 4,
+    "resolved": 1,
+    "regressions": 0,
+    "verdict": "passed",
+    "source_unchanged": true,
+    "diff": "--- a/meadow.py\n+++ b/meadow.py\n@@ -1,4 +1,4 @@\n-import os\n+\n import json\n \n \n",
+    "created_at": "2026-10-24T13:32:00.090435+00:00"
+  }
+}

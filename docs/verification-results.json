@@ -1,0 +1,82 @@
+{
+  "measured_date": "2026-10-24",
+  "backend_tests": {
+    "passed": 26,
+    "failed": 0,
+    "command": "python -m pytest tests/test_engine.py -q -p no:cacheprovider"
+  },
+  "backend_lint": {
+    "status": "passed",
+    "command": "python -m ruff check backend tests scripts --select F --output-format concise"
+  },
+  "typescript": {
+    "status": "passed",
+    "command": "npm run typecheck"
+  },
+  "production_build": {
+    "status": "passed",
+    "command": "npm run build",
+    "type_validation_enabled": true
+  },
+  "real_model_evaluation": {
+    "true_positives": 5,
+    "false_positives": 0,
+    "false_negatives": 0,
+    "eligible_proposals_validated": 4,
+    "protected_issues_withheld": 1,
+    "report": "evaluation-results.json"
+  },
+  "live_production_http": {
+    "passed": 8,
+    "report": "http-results.json"
+  },
+  "browser_tests": {
+    "status": "passed",
+    "passed": 3,
+    "duration_ms": 7496.419,
+    "report": "browser-results.json"
+  },
+  "visual_qa": "passed for inspected desktop/mobile/screens/video frames",
+  "demo_recording": {
+    "status": "verified",
+    "seconds": 118.04,
+    "width": 1920,
+    "height": 1080,
+    "report": "video-evidence.json"
+  },
+  "github_publication": "pending user destination and explicit authorization",
+  "kokoro_narration": {
+    "status": "verified",
+    "voice": "Heart",
+    "seconds": 118.04,
+    "captions": 34,
+    "report": "../demo/assets/audio/final-verification.json"
+  },
+  "youtube": "pending user upload and actual URL",
+  "dev_article": "pending draft only",
+  "accessibility": {
+    "axe_reports": [
+      {
+        "report": "test-results\\journey-protected-paths-mobile-layout-and-local-setup-chromium\\axe-mobile-protected.json",
+        "violations": 0
+      },
+      {
+        "report": "test-results\\journey-protected-paths-mobile-layout-and-local-setup-chromium\\axe-mobile-settings.json",
+        "violations": 0
+      },
+      {
+        "report": "test-results\\journey-real-local-AI-evid-75fec-lated-verification-\u2192-export-chromium\\axe-queue.json",
+        "violations": 0
+      },
+      {
+        "report": "test-results\\journey-real-local-AI-evid-75fec-lated-verification-\u2192-export-chromium\\axe-result.json",
+        "violations": 0
+      },
+      {
+        "report": "test-results\\journey-real-local-AI-evid-75fec-lated-verification-\u2192-export-chromium\\axe-review.json",
+        "violations": 0
+      }
+    ],
+    "note": "Not WCAG certification"
+  }
+}

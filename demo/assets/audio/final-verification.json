@@ -1,0 +1,38 @@
+{
+  "video": "G:\\Hacktoberfest-2026-Week3\\05-PatchGardener\\demo\\assets\\video\\final_demo.mp4",
+  "voice": "Heart",
+  "audio_seconds": 118.04,
+  "captions": 34,
+  "caption_words_match_script": true,
+  "caption_overlap": false,
+  "punctuation_only_captions": false,
+  "voice_tool_named_in_spoken_script_or_captions": false,
+  "pcm_clipped_samples": 0,
+  "integrated_lufs": -16.1,
+  "true_peak_dbtp": -1.45,
+  "full_decode_passed": true,
+  "streams": [
+    {
+      "codec_name": "h264",
+      "codec_type": "video",
+      "width": 1920,
+      "height": 1080,
+      "duration": "118.040000"
+    },
+    {
+      "codec_name": "aac",
+      "codec_type": "audio",
+      "sample_rate": "48000",
+      "channels": 1,
+      "duration": "118.040000"
+    },
+    {
+      "codec_name": "mov_text",
+      "codec_type": "subtitle",
+      "duration": "113.525000"
+    }
+  ],
+  "file_bytes": 4375821,
+  "video_sha256": "85c757f4ce12f129d5db41e7346ee72a9370290094b600e556e3f1b6dc65bd9d",
+  "audio_sha256": "d227900151e4399b25029f8c52981ec6e46118a9eda77b6c69d08f8375dc511e"
+}

@@ -1,0 +1,147 @@
+1
+00:00:01,075 --> 00:00:02,608
+An unused import.
+
+2
+00:00:02,638 --> 00:00:04,245
+A guide that moved.
+
+3
+00:00:04,275 --> 00:00:07,920
+Small maintenance chores keep pulling a
+maintainer away from the work they meant
+
+4
+00:00:07,950 --> 00:00:08,875
+to do.
+
+5
+00:00:11,235 --> 00:00:15,069
+PatchGardener scans this fictional
+repository with real tools.
+
+6
+00:00:15,099 --> 00:00:19,860
+Each finding comes with a file, a line, and
+a reproducible diagnosis.
+
+7
+00:00:21,261 --> 00:00:23,653
+This finding sits under authentication.
+
+8
+00:00:23,683 --> 00:00:27,131
+It stays visible, but an AI proposal is
+withheld.
+
+9
+00:00:27,161 --> 00:00:29,860
+Sensitive paths remain in human hands.
+
+10
+00:00:31,325 --> 00:00:32,758
+One unused import.
+
+11
+00:00:32,788 --> 00:00:34,408
+Exact Ruff evidence.
+
+12
+00:00:34,438 --> 00:00:35,845
+A small review unit.
+
+13
+00:00:35,875 --> 00:00:38,200
+The original source is untouched.
+
+14
+00:00:40,750 --> 00:00:42,970
+Qwen proposes the edit locally.
+
+15
+00:00:43,000 --> 00:00:44,870
+Both versions are visible.
+
+16
+00:00:44,900 --> 00:00:49,682
+The app limits the file, the patch size, and
+the permitted Python change.
+
+17
+00:00:49,712 --> 00:00:53,570
+Removing an import can still have side
+effects, so the developer reviews the
+
+18
+00:00:53,600 --> 00:00:54,500
+risk.
+
+19
+00:00:56,250 --> 00:01:00,720
+The button stays disabled until the
+developer checks the approval box.
+
+20
+00:01:00,750 --> 00:01:03,095
+That authorizes a separate copy.
+
+21
+00:01:03,125 --> 00:01:05,875
+It does not authorize a commit or a push.
+
+22
+00:01:11,325 --> 00:01:13,670
+Now the copied patch earns its result.
+
+23
+00:01:13,700 --> 00:01:15,432
+One issue resolved.
+
+24
+00:01:15,462 --> 00:01:17,045
+Zero new findings.
+
+25
+00:01:17,075 --> 00:01:19,282
+The original stayed unchanged.
+
+26
+00:01:19,312 --> 00:01:23,745
+Existing baseline issues remain visible
+rather than being hidden behind a green
+
+27
+00:01:23,775 --> 00:01:24,775
+verdict.
+
+28
+00:01:29,275 --> 00:01:33,270
+Expand the actual test output: three fixture
+tests passed.
+
+29
+00:01:33,300 --> 00:01:36,850
+The exported diff also passed Git's
+applicability check.
+
+30
+00:01:39,275 --> 00:01:42,682
+Export a normal patch and inspect the audit
+trail.
+
+31
+00:01:42,712 --> 00:01:47,345
+Four eligible fixture repairs validated in
+the measured evaluation, while one
+
+32
+00:01:47,375 --> 00:01:49,545
+protected issue was withheld.
+
+33
+00:01:49,575 --> 00:01:51,270
+Less mechanical tending.
+
+34
+00:01:51,300 --> 00:01:53,525
+More room for the work that matters.
