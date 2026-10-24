@@ -6,6 +6,8 @@ PatchGardener scans an allowlisted local repository with Ruff and relative Markd
 
 Built for [Hacktoberfest Week 3: Slow and Steady](https://dev.to/challenges/hacktoberfest-week3-2026-10-19). No Gemma models or Gemma category. The included Meadow Notes repository is **fictional, explicitly synthetic test data**; its findings and validation results are real.
 
+Public source: [unicorn-9-spec/PatchGardener](https://github.com/unicorn-9-spec/PatchGardener). The seven screenshots in this repository are captures of the actual running application.
+
 ![Actual PatchGardener application](demo/assets/screenshots/01-garden.png)
 
 ## Current verification
@@ -110,4 +112,4 @@ Source snapshots, patches and audit records stay in `data/`, unencrypted at rest
 
 P0 only checks F401/F841, inline relative Markdown links, and `python path.py` example commands. Anchors, external URLs, reference-style links, ESLint, formatting/config cleanup and missing-test detection are outside scope. Python proposals support only single-name top-level F401 import removal; F841 findings may be reported but cannot be patched. Small patches can still be semantically wrong. Review every change.
 
-Publication is intentionally pending the checkpoints in [publishing checklist](docs/PUBLISHING_CHECKLIST.md): user-selected GitHub destination, user-provided YouTube URL and article review. The verified narrated video is complete; the DEV article remains a clearly marked pending draft.
+The user-approved public GitHub repository and screenshot hosting are verified. The remaining checkpoints in [publishing checklist](docs/PUBLISHING_CHECKLIST.md) are the user-provided YouTube URL and article review. The verified narrated video is complete; the DEV article remains a clearly marked pending draft until its actual video URL is supplied.

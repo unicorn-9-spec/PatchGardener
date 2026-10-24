@@ -18,7 +18,7 @@ Source of approval checkpoints: [BUILD_PROMPT.md](../BUILD_PROMPT.md). No accoun
 - [x] Explicit user destination/visibility and publication approval received; not inferred from authentication.
 - [x] Source package reviewed: credentials, `.env`, model weights, local data, generated audio/video, dependencies and caches excluded; no high-confidence token/private-key patterns found.
 - [x] Concrete source package prepared and destination confirmed. GitHub API reported no existing repository at the approved destination before creation.
-- [ ] Push the approved content, verify actual URL/branch/commit, and host actual screenshots using stable commit-pinned raw URLs.
+- [x] Approved source pushed to public [unicorn-9-spec/PatchGardener](https://github.com/unicorn-9-spec/PatchGardener), branch `main`. All seven screenshot URLs at commit `ff8c76781bdaf9e96bab5371aa84c0fa939531dd` returned PNG bytes matching their local SHA-256 hashes. See [publication verification](publication-results.json).
 
 ## Kokoro narration
 
@@ -31,7 +31,7 @@ Source of approval checkpoints: [BUILD_PROMPT.md](../BUILD_PROMPT.md). No accoun
 
 ## YouTube and DEV
 
-- [ ] Ask the user to upload the final MP4 to their chosen YouTube account as Public or Unlisted and return the actual URL. Do not upload automatically.
+- [x] Asked the user to upload the verified final MP4 to their chosen YouTube account as Public or Unlisted and return the actual URL. Awaiting the URL; no automatic upload.
 - [ ] Verify the video ID and embedding; add the genuine `{% youtube ... %}` embed.
 - [ ] Replace the pending article with the final exact-template submission, including real GitHub link and at least four actual hosted screenshots where useful.
 - [ ] Preserve measured claims and limitations; no invented time savings, session embeds, prize integrations or links.

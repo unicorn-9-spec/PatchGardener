@@ -1,0 +1,60 @@
+{
+  "verified_at": "2026-10-24T17:45:54.068575+00:00",
+  "repository": "https://github.com/unicorn-9-spec/PatchGardener",
+  "public": true,
+  "branch": "main",
+  "observed_branch_head": "ff8c76781bdaf9e96bab5371aa84c0fa939531dd",
+  "screenshot_commit": "ff8c76781bdaf9e96bab5371aa84c0fa939531dd",
+  "screenshots": [
+    {
+      "file": "01-garden.png",
+      "url": "https://raw.githubusercontent.com/unicorn-9-spec/PatchGardener/ff8c76781bdaf9e96bab5371aa84c0fa939531dd/demo/assets/screenshots/01-garden.png",
+      "http_status": 200,
+      "bytes": 130874,
+      "sha256": "1b1bf64e6ba0fb95e26e32d501aca71dc3403ea1cf569c41ec1d9fecbb6f6214"
+    },
+    {
+      "file": "02-evidence-queue.png",
+      "url": "https://raw.githubusercontent.com/unicorn-9-spec/PatchGardener/ff8c76781bdaf9e96bab5371aa84c0fa939531dd/demo/assets/screenshots/02-evidence-queue.png",
+      "http_status": 200,
+      "bytes": 132777,
+      "sha256": "03527e986db3320bd55191b43d7d1cec4c785b67338cff535baa9bc9f5cd17cc"
+    },
+    {
+      "file": "03-exact-evidence.png",
+      "url": "https://raw.githubusercontent.com/unicorn-9-spec/PatchGardener/ff8c76781bdaf9e96bab5371aa84c0fa939531dd/demo/assets/screenshots/03-exact-evidence.png",
+      "http_status": 200,
+      "bytes": 102394,
+      "sha256": "be2ba88c04003ca92d6d73d1d594bb139867f9c7e2ca1b93a30ed93e41f9ed92"
+    },
+    {
+      "file": "04-local-ai-diff.png",
+      "url": "https://raw.githubusercontent.com/unicorn-9-spec/PatchGardener/ff8c76781bdaf9e96bab5371aa84c0fa939531dd/demo/assets/screenshots/04-local-ai-diff.png",
+      "http_status": 200,
+      "bytes": 92518,
+      "sha256": "eb241e8d798b31efd485d514c047ff84d54d89552c850fcd945df8584f66116e"
+    },
+    {
+      "file": "05-verified-outcome.png",
+      "url": "https://raw.githubusercontent.com/unicorn-9-spec/PatchGardener/ff8c76781bdaf9e96bab5371aa84c0fa939531dd/demo/assets/screenshots/05-verified-outcome.png",
+      "http_status": 200,
+      "bytes": 98013,
+      "sha256": "9c842eef761af911bde4eab215d28afad2cb8d1dd64688e864dc8160875c3dc7"
+    },
+    {
+      "file": "06-real-tests.png",
+      "url": "https://raw.githubusercontent.com/unicorn-9-spec/PatchGardener/ff8c76781bdaf9e96bab5371aa84c0fa939531dd/demo/assets/screenshots/06-real-tests.png",
+      "http_status": 200,
+      "bytes": 98576,
+      "sha256": "26272ad5b0917e3a3aaa567ced598bc5179539831dd34b7d55d14b357cf6dee8"
+    },
+    {
+      "file": "07-audit.png",
+      "url": "https://raw.githubusercontent.com/unicorn-9-spec/PatchGardener/ff8c76781bdaf9e96bab5371aa84c0fa939531dd/demo/assets/screenshots/07-audit.png",
+      "http_status": 200,
+      "bytes": 94703,
+      "sha256": "161079462fe51660101718d43fe7ee224042296ba26de5939b443dd9ee428118"
+    }
+  ],
+  "youtube": "pending user upload and actual URL"
+}

@@ -1,6 +1,6 @@
 # Actual application demonstration plan
 
-Status: actual recording and Heart narration completed and verified on 24 October 2026. `demo/assets/video/final_demo.mp4` is 118.04 seconds at 1920×1080, with audio, burned captions and a selectable subtitle track. Full decoding passed. Seven actual application screenshots are saved. GitHub/YouTube publishing remains pending.
+Status: actual recording and Heart narration completed and verified on 24 October 2026. `demo/assets/video/final_demo.mp4` is 118.04 seconds at 1920×1080, with audio, burned captions and a selectable subtitle track. Full decoding passed. Source and seven actual screenshots are published at [unicorn-9-spec/PatchGardener](https://github.com/unicorn-9-spec/PatchGardener). The user's YouTube upload/URL remains pending.
 
 ## Reproduce
 

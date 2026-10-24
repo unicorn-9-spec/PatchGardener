@@ -2,7 +2,7 @@ Title: I Built an AI Gardener for the Boring Work Every Open-Source Maintainer A
 
 Tags: devchallenge, hf26challenge, opensource, ai
 
-**Editorial status: PENDING DRAFT, not ready to publish.** The local application, model evaluation, browser verification, seven screenshots and 118.04-second Heart-narrated video are real and complete. GitHub destination/push, YouTube URL and user review remain incomplete. Screenshot links below are local preview paths and must be replaced with verified hosted URLs after the destination is approved. No public links or embeds are invented. The final article must be displayed in full for review.
+**Editorial status: PENDING DRAFT, not ready to publish.** The local application, model evaluation, browser verification, seven screenshots, 118.04-second Heart-narrated video and user-approved public GitHub repository are complete. Screenshot URLs below are verified and commit-pinned. The actual YouTube URL and user article review remain pending; no video embed is invented. The final article must be displayed in full for review after the actual URL is supplied.
 
 ---
 
@@ -39,17 +39,17 @@ Another planted issue lives under `auth/`. It appears in the queue with its real
 
 The actual narrated demo is 118.04 seconds at 1920×1080, using the user's chosen Heart voice with synchronized captions. It shows fresh local inference, explicit approval, a real separate copy, passing fixture tests and patch export. The complete MP4 decoded successfully. A user-uploaded YouTube URL is still pending; there is no invented embed.
 
-![Actual repository garden](../demo/assets/screenshots/01-garden.png)
+![Actual repository garden](https://raw.githubusercontent.com/unicorn-9-spec/PatchGardener/ff8c76781bdaf9e96bab5371aa84c0fa939531dd/demo/assets/screenshots/01-garden.png)
 
-![Actual scanner findings](../demo/assets/screenshots/02-evidence-queue.png)
+![Actual scanner findings](https://raw.githubusercontent.com/unicorn-9-spec/PatchGardener/ff8c76781bdaf9e96bab5371aa84c0fa939531dd/demo/assets/screenshots/02-evidence-queue.png)
 
-![Actual local Qwen proposal and side-by-side diff](../demo/assets/screenshots/04-local-ai-diff.png)
+![Actual local Qwen proposal and side-by-side diff](https://raw.githubusercontent.com/unicorn-9-spec/PatchGardener/ff8c76781bdaf9e96bab5371aa84c0fa939531dd/demo/assets/screenshots/04-local-ai-diff.png)
 
-![Actual approved-copy result and unit test output](../demo/assets/screenshots/06-real-tests.png)
+![Actual approved-copy result and unit test output](https://raw.githubusercontent.com/unicorn-9-spec/PatchGardener/ff8c76781bdaf9e96bab5371aa84c0fa939531dd/demo/assets/screenshots/06-real-tests.png)
 
 ## Code
 
-The working source is currently local. The GitHub destination has not been selected or published; that requires the user's explicit choice of username or organization and repository visibility.
+The complete source is public at [unicorn-9-spec/PatchGardener](https://github.com/unicorn-9-spec/PatchGardener), published under the account and visibility explicitly chosen by the user. It includes the runnable application, synthetic fixture and ground truth, real evaluation results, screenshots, recording script and narration workflow. Runtime source snapshots, credentials, model weights and generated audio/video are excluded.
 
 The frontend uses Next.js, React, TypeScript and Tailwind, with a shadcn-style button primitive and semantic review controls. FastAPI and typed Pydantic models implement the local API. SQLite keeps scan records, proposals, approvals, validation outcomes and an audit trail. Ollama serves Qwen3-8B on loopback.
 
