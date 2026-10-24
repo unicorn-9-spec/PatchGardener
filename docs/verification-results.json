@@ -66,10 +66,11 @@
     "report": "youtube-verification.json"
   },
   "dev_article": {
-    "status": "ready_for_user_review",
-    "path": "docs/DEV_SUBMISSION.md",
-    "report": "submission-verification.json",
-    "published_to_dev": false
+    "status": "published_and_verified",
+    "url": "https://dev.to/ali_hamza_4bd92ee9f67e78702/i-built-an-ai-gardener-for-the-boring-work-every-open-source-maintainer-avoids-4doc",
+    "published_by": "user",
+    "published_to_dev": true,
+    "report": "dev-publication-verification.json"
   },
   "accessibility": {
     "axe_reports": [

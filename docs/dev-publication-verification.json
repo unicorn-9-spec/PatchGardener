@@ -1,0 +1,71 @@
+{
+  "verified_at": "2026-10-24T18:20:12.139499+00:00",
+  "url": "https://dev.to/ali_hamza_4bd92ee9f67e78702/i-built-an-ai-gardener-for-the-boring-work-every-open-source-maintainer-avoids-4doc",
+  "article_id": 4911797,
+  "title": "I Built an AI Gardener for the Boring Work Every Open-Source Maintainer Avoids",
+  "author": "ali_hamza_4bd92ee9f67e78702",
+  "published_at": "2026-10-24T18:07:35Z",
+  "published_by": "user",
+  "page_http_status": 200,
+  "api_http_status": 200,
+  "tags": [
+    "devchallenge",
+    "hf26challenge",
+    "ai"
+  ],
+  "required_challenge_tags_present": true,
+  "headings": [
+    "What I Built",
+    "Demo",
+    "Code",
+    "How I Built It",
+    "Why Does Open Innovation Matter?",
+    "The Lazy Payoff",
+    "Prize Categories"
+  ],
+  "youtube_iframe": "https://www.youtube.com/embed/cR2HYNkqO_0",
+  "repository": "https://github.com/unicorn-9-spec/PatchGardener",
+  "source_images": [
+    "https://raw.githubusercontent.com/unicorn-9-spec/PatchGardener/ff8c76781bdaf9e96bab5371aa84c0fa939531dd/demo/assets/screenshots/01-garden.png",
+    "https://raw.githubusercontent.com/unicorn-9-spec/PatchGardener/ff8c76781bdaf9e96bab5371aa84c0fa939531dd/demo/assets/screenshots/02-evidence-queue.png",
+    "https://raw.githubusercontent.com/unicorn-9-spec/PatchGardener/ff8c76781bdaf9e96bab5371aa84c0fa939531dd/demo/assets/screenshots/04-local-ai-diff.png",
+    "https://raw.githubusercontent.com/unicorn-9-spec/PatchGardener/ff8c76781bdaf9e96bab5371aa84c0fa939531dd/demo/assets/screenshots/06-real-tests.png"
+  ],
+  "rendered_images": [
+    {
+      "url": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fcjfthrbuwey0rgam8b4u.png",
+      "alt": "Actual repository garden",
+      "http_status": 200,
+      "bytes": 60256,
+      "content_type": "image/webp",
+      "sha256": "31048b94044c80f7941be6e496b617ab8bc76a24c20adec9378a1109de831aed"
+    },
+    {
+      "url": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2F6emuv17hqjycil9nehav.png",
+      "alt": "Actual scanner findings",
+      "http_status": 200,
+      "bytes": 59714,
+      "content_type": "image/webp",
+      "sha256": "00c8ce7ba328a8f992a983538046c0d25a90b4ab009d487dc21a6dc894179e28"
+    },
+    {
+      "url": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fk2sws92qhfmuij0hg45h.png",
+      "alt": "Actual local Qwen proposal and side-by-side diff",
+      "http_status": 200,
+      "bytes": 50508,
+      "content_type": "image/webp",
+      "sha256": "cb641c325cf7c2ffc2e2150aefb77e5a2698ff4db6880f3c242ac619e512b779"
+    },
+    {
+      "url": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fory7a6selqx5fdl2sen0.png",
+      "alt": "Actual approved-copy result and unit test output",
+      "http_status": 200,
+      "bytes": 59148,
+      "content_type": "image/webp",
+      "sha256": "6165e183127a04bcf4381e7b2528f8b9b42dd6255aee4c731dc9fb402d4cd69c"
+    }
+  ],
+  "body_matches_local_submission": true,
+  "published_body_sha256": "767b7b3781e26da39eae921b444e61877b053fa6bb72ac97bed52d6e2d65fa09",
+  "verification_scope": "Published HTML and official public API; required tags/headings, video iframe, repository link and rendered screenshot HTTP responses"
+}

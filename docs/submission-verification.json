@@ -18,6 +18,8 @@
     "https://raw.githubusercontent.com/unicorn-9-spec/PatchGardener/ff8c76781bdaf9e96bab5371aa84c0fa939531dd/demo/assets/screenshots/06-real-tests.png"
   ],
   "sha256": "6bf4dc872528de63607768b6771bd951bd5968295f74618236d4106fb9dc880e",
-  "status": "ready_for_user_review",
-  "published_to_dev": false
+  "status": "published_by_user",
+  "published_to_dev": true,
+  "published_url": "https://dev.to/ali_hamza_4bd92ee9f67e78702/i-built-an-ai-gardener-for-the-boring-work-every-open-source-maintainer-avoids-4doc",
+  "publication_report": "dev-publication-verification.json"
 }

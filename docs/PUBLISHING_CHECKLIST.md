@@ -1,4 +1,4 @@
-# Publishing checklist — user review remaining
+# Publishing checklist — completed
 
 Source of approval checkpoints: [BUILD_PROMPT.md](../BUILD_PROMPT.md). No account, organization, voice or remote destination has been selected on the user's behalf.
 
@@ -35,7 +35,8 @@ Source of approval checkpoints: [BUILD_PROMPT.md](../BUILD_PROMPT.md). No accoun
 - [x] Verified ID `cR2HYNkqO_0`, official oEmbed, playability OK, embedding permitted, 118-second duration, and thumbnail matching the actual captioned application. Added `{% youtube cR2HYNkqO_0 %}`. See [YouTube verification](youtube-verification.json).
 - [x] Completed the exact-template article with real GitHub link, actual YouTube embed and four verified commit-pinned screenshots.
 - [x] Preserved measured claims and limitations; no invented time savings, session embeds, prize integrations or links.
-- [x] Entire article Markdown supplied in chat for user review.
-- [ ] User reviews the final article. Never automatically publish to DEV.
+- [x] Final article supplied as a Markdown file at the user's requested path for review.
+- [x] User reviewed and manually published the article. The agent did not publish or modify it on DEV.
+- [x] Verified the [published post](https://dev.to/ali_hamza_4bd92ee9f67e78702/i-built-an-ai-gardener-for-the-boring-work-every-open-source-maintainer-avoids-4doc): HTTP 200, required challenge tags and headings, correct YouTube iframe, repository link and all four rendered screenshot responses. Published body matches the local submission. See [DEV verification](dev-publication-verification.json).
 
-The complete article is ready for user review and manual submission; it has not been published to DEV. Challenge page verified on 24 October 2026: https://dev.to/challenges/hacktoberfest-week3-2026-10-19. Its required tags are `devchallenge` and `hf26challenge`. The application implements no partner-category integration; no partner prize category is claimed, including Gemma.
+The user published the completed article on 24 October 2026. Challenge page verified on 24 October 2026: https://dev.to/challenges/hacktoberfest-week3-2026-10-19. Its required tags `devchallenge` and `hf26challenge` are present. The application implements no partner-category integration; no partner prize category is claimed, including Gemma.

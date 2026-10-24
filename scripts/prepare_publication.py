@@ -36,7 +36,7 @@ def main():
                 for match in pattern.finditer(text):
                     findings.append({"path": relative, "line": text[:match.start()].count("\n") + 1, "kind": label})
             files.append({"path": relative, "bytes": len(content), "sha256": hashlib.sha256(content).hexdigest()})
-    report = {"files": files, "total_files": len(files), "total_bytes": sum(item["bytes"] for item in files), "high_confidence_secret_findings": findings, "excluded": sorted(IGNORED_DIRS) + [".test-tmp*", "*.pyc", "*.tsbuildinfo", "*.mp4", "*.webm", "*.wav"], "publication": "pending explicit destination and visibility; no external writes performed"}
+    report = {"files": files, "total_files": len(files), "total_bytes": sum(item["bytes"] for item in files), "high_confidence_secret_findings": findings, "excluded": sorted(IGNORED_DIRS) + [".test-tmp*", "*.pyc", "*.tsbuildinfo", "*.mp4", "*.webm", "*.wav"], "publication": "Source-only review; this script performs no external writes"}
     review = ROOT / ".tools/publication"
     review.mkdir(parents=True, exist_ok=True)
     (review / "review.json").write_text(json.dumps(report, indent=2), encoding="utf-8")

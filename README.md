@@ -8,6 +8,8 @@ Built for [Hacktoberfest Week 3: Slow and Steady](https://dev.to/challenges/hack
 
 Public source: [unicorn-9-spec/PatchGardener](https://github.com/unicorn-9-spec/PatchGardener). The seven screenshots in this repository are captures of the actual running application.
 
+Published write-up: [I Built an AI Gardener for the Boring Work Every Open-Source Maintainer Avoids](https://dev.to/ali_hamza_4bd92ee9f67e78702/i-built-an-ai-gardener-for-the-boring-work-every-open-source-maintainer-avoids-4doc).
+
 ![Actual PatchGardener application](demo/assets/screenshots/01-garden.png)
 
 ## Current verification
@@ -112,4 +114,4 @@ Source snapshots, patches and audit records stay in `data/`, unencrypted at rest
 
 P0 only checks F401/F841, inline relative Markdown links, and `python path.py` example commands. Anchors, external URLs, reference-style links, ESLint, formatting/config cleanup and missing-test detection are outside scope. Python proposals support only single-name top-level F401 import removal; F841 findings may be reported but cannot be patched. Small patches can still be semantically wrong. Review every change.
 
-The user-approved public GitHub repository, screenshot hosting and user-uploaded YouTube video are verified. The complete article is in [docs/DEV_SUBMISSION.md](docs/DEV_SUBMISSION.md), ready for the user's review before manual DEV publication. The agent does not publish to DEV automatically.
+The user-approved public GitHub repository, screenshot hosting and user-uploaded YouTube video are verified. The user published the article on DEV; its required challenge tags, section order, video iframe, repository link and four rendered screenshots were checked through the official public API and HTTP responses. The published article body matches [docs/DEV_SUBMISSION.md](docs/DEV_SUBMISSION.md). See [publication verification](docs/dev-publication-verification.json).
