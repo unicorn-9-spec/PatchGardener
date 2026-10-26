@@ -1,108 +1,104 @@
-Title: I Built an AI Gardener for the Boring Work Every Open-Source Maintainer Avoids
+Title: PatchGardener: Small Repository Fixes, Real Evidence, Human Approval
 
 Tags: devchallenge, hf26challenge, opensource, ai
 
-*This is a submission for the [Hacktoberfest Open-Source AI Challenge Week 3: Slow and Steady](https://dev.to/challenges/hacktoberfest-week3-2026-10-19)*
+*This is a submission for the [Hacktoberfest Open-Source AI Challenge Week 3: Slow and Steady](https://dev.to/challenges/hacktoberfest-week3-2026-10-19).*
 
 ## What I Built
 
-Picture a maintainer opening a repository to make one small change. Before reaching it, they notice an unused import, a README link pointing to a guide that moved, and an example command whose script no longer exists.
+An unused import is easy to remove. A broken README link is easy to repair. A stale example command is easy to overlook until someone tries it.
 
-None of those tasks is especially difficult. Each still asks for a context switch: locate the evidence, decide what the intended replacement was, edit the file, run checks, and work out whether anything else changed. The burden is in repeating the whole loop for work that rarely feels urgent enough to finish.
+The effort comes from repeating the whole maintenance loop: find the problem, check the evidence, decide on the edit, review the change, run checks, and make sure nothing else moved.
 
-PatchGardener turns that loop into a reviewable maintenance queue. It scans a local repository, presents actual tool evidence, asks a local open-weight model for a minimal edit, explains the rule-based risk, and waits for the developer to approve it. Approval creates separate baseline and patched copies. The original stays untouched. The result includes before/after findings, actual test output where execution is permitted, and an ordinary `.patch` file.
+I built **PatchGardener** to turn those small chores into concrete review decisions. It scans a repository, shows an exact finding from a deterministic tool, asks Qwen for a minimal patch, and waits for a human to approve it. Validation runs against separate baseline and patched copies. The original repository stays unchanged, and the result is an ordinary `.patch` file.
 
-The interface is deliberately quiet: a repository selector, a queue, evidence, a diff, a decision, and a result. There is no prompt box asking the maintainer to rediscover what the tool already knows. There is also no automatic push waiting at the end of the journey.
+The interface follows that sequence: a maintenance queue, file-and-line evidence, a side-by-side diff, an approval checkbox, and before/after checks. It handles unused Python imports, broken relative Markdown links, and references to missing Python examples. Sensitive paths are withheld from proposals.
 
-The scope is narrow. P0 handles unused-import findings, inline relative Markdown links, and stale Python example paths. An assistant that can explain precisely what it did is more useful for this task than one that promises to maintain an entire project without supervision.
+PatchGardener has a personal local workspace and a synthetic demo mode. The demo accepts only **Meadow Notes**, a fictional note-tagging repository included with the project. Visitors receive separate expiring workspaces for source copies, proposals, diffs and audit records. There is no server-path field or executable-command input.
+
+It also has an optional **Backboard review notebook**. After a fix passes validation, the maintainer can save a small record of the decision and recall it in a fresh conversation. The notebook remembers the maintenance outcome while source files and diffs stay in the application.
+
+![The actual maintenance queue, with scanner evidence and a withheld protected-path finding](https://raw.githubusercontent.com/unicorn-9-spec/PatchGardener/3ee6cb43710b9397b2da1b69750afb32d78cbd45/demo/assets/backboard/screenshots/02-scanner-findings.png)
 
 ## Demo
 
-{% youtube cR2HYNkqO_0 %}
+{% youtube X4P1CGkZocI %}
 
-The demonstration repository is Meadow Notes, a fictional note-tagging library included as explicitly synthetic test data. It contains real files and deliberately planted problems. The scanners, local inference, patch creation, approval and validation all run against those files.
+The narrated walkthrough runs for 3 minutes and 7.8 seconds at 1920×1080. It shows the real application, fresh Qwen inference, explicit approval and validation, patch export, protected-path rejection, and genuine Backboard memory save and recall. It includes spoken narration and 43 synchronized English caption cues. The local MP4 passed full decoding and audio/video synchronization checks, and the YouTube upload is playable and permits embedding.
 
-One measured example starts here:
+The demo starts with a real Ruff finding at `meadow.py:1`:
 
 ```python
 import os
 import json
 ```
 
-Ruff identifies the unused `os` import at `meadow.py:1`. Qwen proposes a structured edit against the exact existing text. The validator accepts only removal of the selected import and rejects unrelated executable changes. After approval, the copied version is checked against its baseline, its unit tests run, and the original fingerprint is checked again.
+Selecting the unused `os` import shows its scanner evidence. Qwen reads the selected file and returns a structured edit. PatchGardener checks that edit against its deterministic rules before presenting it for review.
 
-The original scan contains five findings. Fixing this one leaves four. That is shown explicitly rather than painting the entire repository green. The selected issue disappeared, no new issue signatures appeared, the three fixture tests passed, the exported diff was applicable, and the original was unchanged.
+![A genuine local Qwen proposal, showing the original, proposed change and approval controls](https://raw.githubusercontent.com/unicorn-9-spec/PatchGardener/3ee6cb43710b9397b2da1b69750afb32d78cbd45/demo/assets/backboard/screenshots/04-real-qwen-diff.png)
 
-Another planted issue lives under `auth/`. It appears in the queue with its real evidence, but the proposal is withheld. Even a small-looking change in a sensitive area should not quietly pass through the same path as a documentation repair.
+Approval is an explicit decision. After I check the box and approve, the application creates baseline and patched copies, checks the exported diff for applicability, reruns the scanners, runs the permitted fixture tests, and checks the original fingerprint again.
 
-The narrated walkthrough is 118.04 seconds at 1920×1080, with synchronized captions. It shows fresh local inference, explicit approval, a real separate copy, passing fixture tests and patch export. The complete local MP4 decoded successfully. The linked YouTube upload reports a 118-second duration and allows embedding.
+The outcome is deliberately specific: **one finding resolved, zero regressions, original unchanged**. The fixture starts with five findings, so this fix leaves four. A passing change does not turn the whole repository green.
 
-![Actual repository garden](https://raw.githubusercontent.com/unicorn-9-spec/PatchGardener/ff8c76781bdaf9e96bab5371aa84c0fa939531dd/demo/assets/screenshots/01-garden.png)
+![Validation against the baseline, with actual fixture test output expanded](https://raw.githubusercontent.com/unicorn-9-spec/PatchGardener/3ee6cb43710b9397b2da1b69750afb32d78cbd45/demo/assets/backboard/screenshots/06-fixture-tests.png)
 
-![Actual scanner findings](https://raw.githubusercontent.com/unicorn-9-spec/PatchGardener/ff8c76781bdaf9e96bab5371aa84c0fa939531dd/demo/assets/screenshots/02-evidence-queue.png)
+The video includes exporting the actual diff and selecting the planted finding under `auth/`, whose proposal is rejected. Separate browser acceptance checks also attempt to read a proposal and export from another visitor session; those requests are blocked.
 
-![Actual local Qwen proposal and side-by-side diff](https://raw.githubusercontent.com/unicorn-9-spec/PatchGardener/ff8c76781bdaf9e96bab5371aa84c0fa939531dd/demo/assets/screenshots/04-local-ai-diff.png)
+The complete demo-mode browser journey has been verified over local HTTPS with real Qwen inference. It captures the scanner queue, proposed diff, validation result, protected-path rejection and live health dashboard. These are local application checks. A DigitalOcean-hosted URL and hosted screenshots are pending approved provisioning and successful deployment checks.
 
-![Actual approved-copy result and unit test output](https://raw.githubusercontent.com/unicorn-9-spec/PatchGardener/ff8c76781bdaf9e96bab5371aa84c0fa939531dd/demo/assets/screenshots/06-real-tests.png)
+For Backboard, I verified an additional live sequence: save the approved review with automatic memory enabled, wait for indexing, then recall it in a different thread under the same private assistant. Backboard retrieved one memory and returned the correct review ID, file, F401 finding and successful validation outcome. This check used actual API calls and the local Qwen patch workflow.
+
+![Actual Backboard review recall, including retrieved-memory count and conversation evidence](https://raw.githubusercontent.com/unicorn-9-spec/PatchGardener/3ee6cb43710b9397b2da1b69750afb32d78cbd45/demo/assets/backboard/screenshots/08-backboard-recalled.png)
 
 ## Code
 
-The complete source is public at [unicorn-9-spec/PatchGardener](https://github.com/unicorn-9-spec/PatchGardener). It includes the runnable application, synthetic fixture and ground truth, real evaluation results, screenshots, recording script and narration workflow. Runtime source snapshots, credentials, model weights and generated audio/video are excluded.
+Source repository: [PatchGardener on GitHub](https://github.com/unicorn-9-spec/PatchGardener).
 
-The frontend uses Next.js, React, TypeScript and Tailwind, with a shadcn-style button primitive and semantic review controls. FastAPI and typed Pydantic models implement the local API. SQLite keeps scan records, proposals, approvals, validation outcomes and an audit trail. Ollama serves Qwen3-8B on loopback.
+The project includes the synthetic fixture and its known findings, strict patch gates, backend security tests, a real-inference browser acceptance journey, Dockerfiles, a Linux Compose configuration, and a DigitalOcean Terraform definition. The code is MIT licensed.
 
-Manual setup is documented in the README. Once dependencies and weights are installed, start FastAPI on `127.0.0.1:8105` and Next.js on `127.0.0.1:3105`. The browser talks to a restricted same-origin proxy; source context goes only to the local Ollama instance.
-
-The code separates the indexer, scanner, model proposer, patch gate, fixed-command runner and persistence layer. That separation matters because each answers a different question. Finding an issue does not authorize an edit. Producing valid JSON does not establish safety. Approval does not establish that the result passed validation.
+For a local workspace, install the Python and Node dependencies, pull `qwen3:8b` in Ollama, start FastAPI on loopback port 8105, and start the Next.js interface on loopback port 3105. The README contains the commands and execution boundaries.
 
 ## How I Built It
 
-The first useful boundary was separating static analysis from language-model reasoning.
+The frontend uses Next.js, React and TypeScript. FastAPI coordinates the workflow, Pydantic validates structured inputs and model replies, and SQLite stores scan, proposal, approval and validation records.
 
-Ruff knows whether an import is unused. A deterministic link checker knows whether a relative path resolves within the indexed source inventory. Neither needs a model to pretend those are probabilistic judgments. Their output supplies the file, line, tool, rule and exact excerpt shown in the UI.
+Ruff finds Python issues. A small relative-path scanner finds broken documentation links and missing example references without fetching external URLs. The model receives the selected file, its evidence and a bounded path inventory. It has no shell tools and cannot choose commands to execute.
 
-Qwen is responsible for proposing an edit from that evidence. For a broken guide link, it can choose an appropriate existing destination from the bounded path inventory. For a stale command, it can identify the current example script. It returns structured replacements with a path, exact old substring and replacement text. There are no generated shell commands and no tools delegated to the model.
+**Qwen proposes. Application code decides what is admissible.**
 
-The default model is Qwen3-8B, using the installed Q4_K_M Ollama artifact. Its [Apache-2.0 license](https://huggingface.co/Qwen/Qwen3-8B/blob/main/LICENSE) was verified from the model publisher. The application records the model digest alongside each accepted proposal and caps its context at 8,192 tokens. It sends the selected file and evidence rather than the entire repository. A missing model or invalid response stops the flow; production has no canned-response fallback.
+An edit must target the selected evidence file, match existing text exactly, avoid protected paths, and stay within the diff budget. Python changes must be the exact removal of the reported unused import and pass an AST restriction. Approval rechecks the stored proposal and original-source fingerprint before creating any patched copy.
 
-Repository contents are treated as untrusted input. Prompt instructions establish that boundary, but the actual protection comes from deterministic gates after inference. An edit must target the selected existing evidence file. Its old text must match exactly once. Hidden, escaping and linked paths are rejected. Protected labels are excluded. A patch is capped at 24 changed lines and 16 KB.
+Arbitrary repository code never runs. The built-in fixture can run its fixed tests only when the original bytes match the trusted fixture. Local repositories supplied by the operator receive static checks. A missing model or malformed reply stops the flow; PatchGardener does not substitute a prerecorded response.
 
-Python proposals have a stronger restriction: the AST after the edit must match the original AST with only the specific reported top-level, single-name import removed. A replacement that also changes a function body fails. Removing a second unused import also fails, even if that seems helpful. The maintainer approved one review unit, not a bundle of improvements.
+For the public demo design, the backend rejects local repository roots at startup. An HTTPS-only signed session cookie selects a private workspace with its own SQLite database. Session expiry, request limits, work quotas and resource bounds keep the demonstration small. The source, diffs and audit routes all use that same session boundary.
 
-That still does not make import removal automatically safe. Imports can trigger side effects. The UI therefore assigns a categorical medium risk and explains why human review remains necessary. Documentation-only edits receive a different category. No percentage claims such as “98% safe” are generated.
+### Backboard memory across reviews
 
-Approval checks the source fingerprint again, revalidates the stored edit, records the decision, and creates separate copies. Git checks whether the exported unified diff applies cleanly to the baseline. Static checks run on both versions, and issue signatures are compared for regressions.
+The notebook uses the official Backboard Python SDK. A save passes `memory="Auto"`; recall passes `memory="Readonly"` and starts a new thread with the same assistant. Each workspace owns its assistant mapping, so visitors do not share a notebook. Notebook replies use Qwen3-30B-A3B-Instruct through Backboard's OpenRouter integration.
 
-Execution policy was the most consequential design choice. A copied repository is not an OS sandbox. Running an arbitrary project's tests can execute arbitrary code with the application's privileges. PatchGardener therefore never runs tests from user-configured repositories. Those receive static validation only. The built-in fixture can run its fixed unit suite only when every original file matches the known fixture bytes, and the Python edit passes the AST restriction.
+The application sends a fixed record of the synthetic finding and approved validation outcome. It rejects private repositories, unapproved changes and failed validation runs. It sends no source files, generated diffs, arbitrary prompts or model tools. Remembering a review is an explicit action after validation; the notebook cannot approve or apply a patch.
 
-The runner uses fixed executable paths, argv arrays, `shell=False`, timeouts and an environment stripped of user secrets. Those measures are useful, but they are not represented as kernel resource limits or network isolation. A future arbitrary-project test runner needs a real container or OS sandbox before it belongs in this workflow.
+The measured write and recall responses reported generation costs of $0.0000306 and $0.0000495. Their $0.0000801 sum describes those two reported calls, not a complete invoice or a promise about future usage. Backboard retains saved facts separately from local session expiry, which the interface explains before transfer.
 
-Local evaluation provided a small but inspectable result: five planted in-scope findings detected, zero false positives, four eligible real-Qwen proposals validated, and one protected finding withheld. Each approved copy passed the fixture's three tests and left the original unchanged. The four fresh inference requests in the final evaluation took 781, 875, 1,030 and 1,233 milliseconds on the available RTX 4090. Those are warm local measurements, not promises for other hardware.
-
-The backend has 26 passing tests, including rejection of an encoding-comment injection that AST comparison alone could miss. Python changes must match exact import deletion as well as the AST check. TypeScript checking, the optimized production build, eight live HTTP checks and all three Playwright browser tests passed. Five axe scans across queue, review, result and mobile views reported zero violations. The screenshots and video were visually inspected; these checks are not accessibility certification or a keyboard usability study.
-
-End-to-end browser testing found something the earlier HTTP smoke test had missed: Next's internal URL used localhost, while the browser opened the loopback IP. The same-origin guard rejected a legitimate scan. Comparing Origin against the validated incoming Host fixed the boundary without accepting external origins. Browser scans also exposed low-contrast labels and a mobile sidebar note that should have been hidden. Those failures led to fixes and regression assertions before recording.
-
-There are other deliberate limits. The inline-link scanner does not crawl external URLs or validate anchors. TypeScript formatting, configuration cleanup and missing-test detection are outside P0. Secret filtering is heuristic, and local snapshots are unencrypted. The diff interface uses accessible HTML; Monaco integration and a verified Docker setup are outside this version.
+The **Deployment health** page reports the running API, SQLite connectivity, installed model availability, digest, Ollama version and active limits. Model presence is a readiness check; the proposal journey proves actual inference.
 
 ## Why Does Open Innovation Matter?
 
-Repository context is often the most valuable part of an organization’s working knowledge. For this task, sending that context elsewhere should be an explicit architectural decision, not an unavoidable consequence of pressing a maintenance button.
+An open-weight model lets this workflow run on the maintainer's machine or on a server they control. The model artifact can be identified by digest, and the prompt, reply schema and acceptance rules are inspectable code.
 
-Open weights make the proposal step a local component. After setup, the application can make its model calls on the maintainer's own machine without requiring a paid inference account. The exact model artifact can be identified by digest. The prompt, schema, context limits and acceptance rules are ordinary code the maintainer can inspect.
+Open-source tools supply the checks around inference. Ruff provides reproducible evidence, Git checks the portable diff, and Python's AST helps constrain the permitted transformation. A fluent explanation alone cannot approve a patch.
 
-Open-source analysis tools also provide a useful counterweight to model fluency. Ruff supplies reproducible evidence. Git checks a portable patch. Python's AST makes the permitted code transformation inspectable. These components let the system keep its promises narrower than the model's ability to generate plausible explanations.
-
-Changing the model should not change the meaning of approval, the protected-path policy, or the requirement to compare against a baseline. Keeping those rules outside inference is what makes the assistant replaceable and reviewable.
+This also keeps the model replaceable. Changing the inference engine should preserve the meaning of protected paths, human approval, baseline comparison and source immutability.
 
 ## The Lazy Payoff
 
-The payoff demonstrated so far is a completed sequence: finding, evidence, proposed diff, approval, separate copy, baseline comparison, test output and export. Four eligible fixture cases completed that sequence; a fifth was deliberately withheld.
+PatchGardener packages a repetitive maintenance loop into something a developer can inspect and finish: evidence, proposed edit, approval, isolated validation and export.
 
-There is no measured claim of minutes saved or increased maintainer productivity. The fixture is small, its ground truth is known, and no user study was conducted. What it proves is that the repetitive mechanical loop can be packaged as a concrete review decision while preserving the original repository.
+The synthetic fixture makes the behavior easy to examine, including the boundaries. A protected finding remains withheld. Other existing issues remain visible after a successful fix. Another visitor cannot retrieve the generated diff. The original source remains the reference point throughout.
 
-That is the kind of laziness this project aims for: fewer tiny chores left open in a maintainer's head, and a clear place to spend the judgment that still belongs to them.
+There is no measured claim of hours saved or accuracy on unseen repositories. The useful result is a complete, reviewable workflow for small maintenance tasks, with the final shipping decision left to the maintainer.
 
 ## Prize Categories
 
-This is prepared as a general Week 3 challenge entry. No partner-category integration has been implemented or claimed. It uses Qwen, and does not target the Gemma category.
+**Best Use of Backboard:** PatchGardener uses Backboard's real memory API to save approved synthetic review outcomes and retrieve them across fresh conversations, with a private assistant per workspace. The live check confirmed indexing, retrieval and correct recall while the open-weight Qwen proposal workflow remained central.
